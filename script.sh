@@ -30,6 +30,29 @@ then echo "file found"
 else echo "not found"; fi
 
 
+#--------------------------------
+# ---operators--
+# & opearator
+age=90
+# -- also [[ $age -gt 18 && $age -lt 100 ]]  
+if [ $age -gt 18 ] && [ $age -lt 100 ]
+then echo "valid age"
+else echo " age not in range "; fi
+# - also & oper
+age=110
+if [ $age -gt 18 -a $age -lt 100 ]
+then echo "valid age"
+else echo " age not in range "; fi
+
+# | or opearator
+age=110
+if [ $age -gt 18 ] || [ $age -lt 100 ]
+then echo "valid age"
+else echo " age not in range "; fi
+## ---also  if [ $age -gt 18 -o $age -lt 100 ]
+## ---also  if [[ $age -gt 18 || $age -lt 100 ]]
+
+
 
 
 
