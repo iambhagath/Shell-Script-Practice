@@ -20,7 +20,11 @@ else echo "v wrong....."; fi
 echo -e "Enter file name : \c"
 read file_n
 # ---- -f to check regular file exits or not ,-e any file exits or not ---
-# -- - d to check directories --
+# -- -d to check directories --
+# --- char special file and video or img or mp3 are block special files
+# --- -b for block files , -c for char file
+# --- -s non empty or empty 
+# --- -r , -w ,-x for files to check read , write , execute
 if [ -f $file_n ]
 then echo "file found"
 else echo "not found"; fi
