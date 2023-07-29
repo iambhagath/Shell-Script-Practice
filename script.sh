@@ -54,5 +54,25 @@ else echo " age not in range "; fi
 
 
 
+# arthematic ops
+n1=20
+n2=3
 
+echo $(( n1 + n2 ))
+echo $(( n1 - n2 ))
+echo $(( n1 * n2 ))
+echo $(( n1 / n2 ))
+echo $(( n1 % n2 ))
+
+echo ''
+echo $(expr $n1 + $n2 )
+echo $(expr $n1 \* $n2 )
+
+# decimal oprs
+n1=20.5
+n2=5
+
+echo "$n1+$n2" | bc
+echo "$n1*$n2" | bc
+echo "scale=2;$n1/$n2" | bc
 
