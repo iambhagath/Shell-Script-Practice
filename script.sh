@@ -76,3 +76,43 @@ echo "$n1+$n2" | bc
 echo "$n1*$n2" | bc
 echo "scale=2;$n1/$n2" | bc
 
+num=27
+# --- -l stands  for math lib, -i interactive
+echo "scale=2;sqrt($num)" | bc -l
+echo "scale=2;3^3" | bc -l
+echo "$n1*$n2" | bc
+echo "scale=2;$n1/$n2" | bc
+
+# case statements 
+: '
+case exprsn in 
+    pattern1 )
+        statements ;;
+    pattern2 )
+        statements ;;
+esac
+'
+# gadi=$1 here $1 takes 1st argument 
+sam=van
+gadi=$sam
+
+case $gadi in 
+    "car" ) echo "gadi is car" ;;
+    "van" ) echo "gadi is van" ;;
+     * )    echo "gadi unknown" 
+esac
+
+
+echo
+LANG=C #to work for capitals
+val="&"
+case $val in 
+    [a-z] ) echo "value between a to z" ;;
+    [A-Z] ) echo "value between A to Z" ;;
+    [0-9] ) echo "value between 0 to 9" ;;
+    ? )     echo "value is any special char" ;;
+    * )     echo "value is multi char" 
+esac
+
+# [a-z] , [A-Z] are regular exression patterns
+
